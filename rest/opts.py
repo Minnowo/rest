@@ -17,7 +17,7 @@ def get_parser():
     )
     general.add_argument(
         "-b", "--backup",
-        dest="backup", metavar="Backup Name", 
+        dest="backup", metavar="NAME", 
         help="The name of the backup",
     )
     general.add_argument(
@@ -26,14 +26,14 @@ def get_parser():
         help="Create the backup",
     )
     general.add_argument(
-        "-a", "--add",
-        dest="add", metavar="Repo Path",
+        "-a", "--add-repo",
+        dest="add", metavar="PATH",
         help="Adds a repo to the backup.",
     )
     general.add_argument(
         "-r", "--remove",
-        dest="remove", metavar="Repo Name",
-        help="Remove a repo from the backup.",
+        dest="remove", metavar=" NAME",
+        help="Remove a repo with the given name from the backup.",
     )
     general.add_argument(
         "-l", "--list",
@@ -42,22 +42,22 @@ def get_parser():
     )
     general.add_argument(
         "-d", "--add-dir",
-        dest="dir", metavar="Dir Path",
+        dest="dir", metavar="PATH",
         help="Add path to the directory.",
     )
     general.add_argument(
         "-f", "--add-file",
-        dest="file", metavar="File Path",
+        dest="file", metavar="PATH",
         help="Add path to the file.",
     )
     general.add_argument(
         "-rd", "--remove-dir",
-        dest="rdir", metavar="Dir Path",
+        dest="rdir", metavar="PATH",
         help="Remove directory path.",
     )
     general.add_argument(
         "-rf", "--remove-file",
-        dest="rfile", metavar="File Path",
+        dest="rfile", metavar="PATH",
         help="Remove file path.",
     )
     general.add_argument(
