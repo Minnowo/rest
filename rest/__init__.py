@@ -29,6 +29,7 @@ def add_repo(BACKUP_ID, repo_path, name=None, *, cursor):
 
         name = "{0}-{1}".format(BACKUP_ID, db.get_repo_number(BACKUP_ID, cursor=cursor))
 
+    # the sig does nothing  currently, i was gonna use them to identify the repository before trying to sync
     sig_path = os.path.join(repo_path, ".rest.sig")
 
     if os.path.isfile(sig_path):

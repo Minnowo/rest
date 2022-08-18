@@ -30,6 +30,7 @@ def expand_path(path, default=None):
     return os.path.expandvars(os.path.expanduser(path))
 
 
+
 def read_sig(sig_path : str):
     
     with open(sig_path, "rb") as reader:

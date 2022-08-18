@@ -11,6 +11,8 @@ python ./main.py -b 'backup_name_here' -c
 Then use restic to create a repository, and add it to rest
 ```ps
 restic init -r 'path_to_repo'
+Repo password...
+
 python ./main.py -b 'backup_name_here' --add-repo 'path_to_repo'
 ```
 
@@ -26,3 +28,10 @@ Now you can have all the added files and folders synced to any repo added to the
 python ./main.py -b 'backup_name_here' --sync
 Enter password...
 ```
+
+## Config:
+
+You can config the very minimal settings by editing [const.py](./rest/const.py)
+
+
+If you want to change the arguments passed into restic when syncing you can find that in [__init__.py](./rest/__init__.py) in the `def sync_db(backup_id, cursor):` function.
